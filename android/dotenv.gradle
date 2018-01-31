@@ -50,7 +50,7 @@ tasks.whenTaskAdded { task ->
                     android.applicationVariants.all { variant ->
                         def variantConfigString = variant.getVariantData().getVariantConfiguration().getFullName()
                         if (envConfigName.contains(variantConfigString.toLowerCase())) {
-                            loadDotEnv(envConfigName)
+                            readDotEnv(envConfigName)
                             project.env.each { k, v ->
                                 def escaped = v.replaceAll("%","\\\\u0025")
                                 variant.buildConfigField "String", k, "\"$v\""
