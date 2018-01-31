@@ -31,7 +31,7 @@ def readDotEnv = {
     }
 }
 
-loadDotEnv()
+readDotEnv()
 
 android.buildTypes.all { type ->
     def envFile = "env_" + type.name;
