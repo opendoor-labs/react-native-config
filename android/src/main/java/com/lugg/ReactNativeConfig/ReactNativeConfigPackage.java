@@ -18,9 +18,8 @@ public class ReactNativeConfigPackage implements ReactPackage {
         );
     }
 
-    @Override
-    public List<Class<? extends JavaScriptModule>> createJSModules() {
-        return Collections.emptyList();
+    public List<Class<? extends JavaScriptModule>> createJSModules() {		
+        return Collections.emptyList();		
     }
 
     @Override
